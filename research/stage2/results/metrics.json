@@ -1,0 +1,1313 @@
+{
+  "generated_from": "2026-10-23T03:17:16+00:00",
+  "sample": {
+    "N225": [
+      "2001-01-04",
+      "2026-10-22",
+      6316
+    ],
+    "DAX": [
+      "2001-01-02",
+      "2026-10-22",
+      6549
+    ],
+    "NDX": [
+      "2001-01-02",
+      "2026-10-22",
+      6483
+    ]
+  },
+  "periods": {
+    "in_sample": [
+      "2001-01-01",
+      "2016-12-31"
+    ],
+    "out_of_sample": [
+      "2017-01-01",
+      "2024-12-31"
+    ],
+    "hold_out": [
+      "2025-01-01",
+      "2026-10-22"
+    ]
+  },
+  "n_tests": 13,
+  "bonferroni_z": 2.890511560691739,
+  "base_cost_bps": 5,
+  "tests": [
+    {
+      "id": "lead_lag:N225",
+      "rule": "lead_lag",
+      "legs": [
+        "N225"
+      ],
+      "by_period": {
+        "in_sample": {
+          "days": 3922,
+          "total_return": 1.3000576255219367,
+          "ann_return": 0.05348420813430721,
+          "ann_vol": 0.18536535977849117,
+          "sharpe": 0.37323882938204256,
+          "t_stat": 1.4923165107223528,
+          "max_drawdown": -0.5833332892095078,
+          "trades": 3921,
+          "hit_rate": 0.4937515939811273,
+          "breakeven_bps": 7.820764345080691
+        },
+        "out_of_sample": {
+          "days": 1956,
+          "total_return": -0.10989709209358378,
+          "ann_return": -0.014471485156193231,
+          "ann_vol": 0.13368910341157814,
+          "sharpe": -0.04290502827040544,
+          "t_stat": -0.12124987365353367,
+          "max_drawdown": -0.3183734442354007,
+          "trades": 1956,
+          "hit_rate": 0.4550102249488753,
+          "breakeven_bps": 4.765802876160305
+        },
+        "hold_out": {
+          "days": 438,
+          "total_return": 0.5422265144686256,
+          "ann_return": 0.27373229749921557,
+          "ann_vol": 0.19044444708205194,
+          "sharpe": 1.365150118434799,
+          "t_stat": 1.8267292083954902,
+          "max_drawdown": -0.19224488228713632,
+          "trades": 438,
+          "hit_rate": 0.4840182648401826,
+          "breakeven_bps": 15.628259227339177
+        }
+      },
+      "cost_sensitivity": {
+        "0": 0.8730974308326489,
+        "2": 0.5066964471914279,
+        "5": -0.04290502827040544,
+        "10": -0.9589074873734591
+      },
+      "checks": {
+        "oos_sharpe_over_0_5": false,
+        "beats_always_long_oos": true,
+        "beats_random_95pct_oos": true,
+        "significant_in_sample_bonferroni": false,
+        "holds_in_hold_out": true
+      },
+      "survives": false
+    },
+    {
+      "id": "lead_lag:DAX",
+      "rule": "lead_lag",
+      "legs": [
+        "DAX"
+      ],
+      "by_period": {
+        "in_sample": {
+          "days": 4063,
+          "total_return": 1.627648330330191,
+          "ann_return": 0.062273679726572384,
+          "ann_vol": 0.2130318288822482,
+          "sharpe": 0.38992069315028505,
+          "t_stat": 1.5592823919572436,
+          "max_drawdown": -0.6330292316332349,
+          "trades": 3837,
+          "hit_rate": 0.5089913995308835,
+          "breakeven_bps": 8.461991219986396
+        },
+        "out_of_sample": {
+          "days": 2026,
+          "total_return": -0.67365590950447,
+          "ann_return": -0.13074541184907096,
+          "ann_vol": 0.1333465131076859,
+          "sharpe": -0.9838927504175717,
+          "t_stat": -2.781439998769638,
+          "max_drawdown": -0.7018720159257188,
+          "trades": 1906,
+          "hit_rate": 0.4664218258132214,
+          "breakeven_bps": -0.5011108772052677
+        },
+        "hold_out": {
+          "days": 460,
+          "total_return": -0.42487288396838463,
+          "ann_return": -0.26439101120735864,
+          "ann_vol": 0.12829835069393578,
+          "sharpe": -2.3275470880681715,
+          "t_stat": -3.124038017789452,
+          "max_drawdown": -0.4836937127350358,
+          "trades": 429,
+          "hit_rate": 0.4428904428904429,
+          "breakeven_bps": -7.540011250431686
+        }
+      },
+      "cost_sensitivity": {
+        "0": -0.08963610888572432,
+        "2": -0.4473750347930192,
+        "5": -0.9838927504175717,
+        "10": -1.8775631611018322
+      },
+      "checks": {
+        "oos_sharpe_over_0_5": false,
+        "beats_always_long_oos": false,
+        "beats_random_95pct_oos": false,
+        "significant_in_sample_bonferroni": false,
+        "holds_in_hold_out": false
+      },
+      "survives": false
+    },
+    {
+      "id": "lead_lag:NDX",
+      "rule": "lead_lag",
+      "legs": [
+        "NDX"
+      ],
+      "by_period": {
+        "in_sample": {
+          "days": 4019,
+          "total_return": -0.8076002282486248,
+          "ann_return": -0.09793089892057139,
+          "ann_vol": 0.22977009736202278,
+          "sharpe": -0.3322222615519617,
+          "t_stat": -1.3285479118045342,
+          "max_drawdown": -0.8758287786634789,
+          "trades": 4004,
+          "hit_rate": 0.49125874125874125,
+          "breakeven_bps": 1.9512265666167121
+        },
+        "out_of_sample": {
+          "days": 2012,
+          "total_return": -0.675898712862139,
+          "ann_return": -0.131495181466604,
+          "ann_vol": 0.17914548510732517,
+          "sharpe": -0.6970136139985924,
+          "t_stat": -1.970439913130639,
+          "max_drawdown": -0.724769141938604,
+          "trades": 2005,
+          "hit_rate": 0.48079800498753117,
+          "breakeven_bps": 0.022897078780642413
+        },
+        "hold_out": {
+          "days": 452,
+          "total_return": -0.48605815741904956,
+          "ann_return": -0.30891590668469504,
+          "ann_vol": 0.17944242499108515,
+          "sharpe": -1.9660012046529303,
+          "t_stat": -2.638770462621775,
+          "max_drawdown": -0.5209771211212668,
+          "trades": 451,
+          "hit_rate": 0.43458980044345896,
+          "breakeven_bps": -9.091850801913589
+        }
+      },
+      "cost_sensitivity": {
+        "0": 0.0032066102853698865,
+        "2": -0.2768822718341731,
+        "5": -0.6970136139985924,
+        "10": -1.397219613663482
+      },
+      "checks": {
+        "oos_sharpe_over_0_5": false,
+        "beats_always_long_oos": false,
+        "beats_random_95pct_oos": false,
+        "significant_in_sample_bonferroni": false,
+        "holds_in_hold_out": false
+      },
+      "survives": false
+    },
+    {
+      "id": "lead_lag:combined",
+      "rule": "lead_lag",
+      "legs": [
+        "N225",
+        "DAX",
+        "NDX"
+      ],
+      "by_period": {
+        "in_sample": {
+          "days": 4163,
+          "total_return": 0.16281469279406902,
+          "ann_return": 0.009477189333158664,
+          "ann_vol": 0.40026985963508444,
+          "sharpe": 0.22413818633864976,
+          "t_stat": 0.8963225944727798,
+          "max_drawdown": -0.8716964290720363,
+          "trades": 4144,
+          "hit_rate": 0.49903474903474904,
+          "breakeven_bps": 6.031847345764539
+        },
+        "out_of_sample": {
+          "days": 2082,
+          "total_return": -0.9058551151773093,
+          "ann_return": -0.25589070217114496,
+          "ann_vol": 0.263985293834394,
+          "sharpe": -0.9876870070697937,
+          "t_stat": -2.792644500161304,
+          "max_drawdown": -0.9203201547590079,
+          "trades": 2071,
+          "hit_rate": 0.4596813133751811,
+          "breakeven_bps": 1.4339017788940691
+        },
+        "hold_out": {
+          "days": 470,
+          "total_return": -0.5441457724592507,
+          "ann_return": -0.35342737600586904,
+          "ann_vol": 0.2767446380293035,
+          "sharpe": -1.4362482288809089,
+          "t_stat": -1.9277350361709673,
+          "max_drawdown": -0.608956477643898,
+          "trades": 469,
+          "hit_rate": 0.44776119402985076,
+          "breakeven_bps": -0.3717086468313074
+        }
+      },
+      "cost_sensitivity": {
+        "0": 0.40161579089855887,
+        "2": -0.15385146976501562,
+        "5": -0.9876870070697937,
+        "10": -2.3784724711219782
+      },
+      "checks": {
+        "oos_sharpe_over_0_5": false,
+        "beats_always_long_oos": false,
+        "beats_random_95pct_oos": false,
+        "significant_in_sample_bonferroni": false,
+        "holds_in_hold_out": false
+      },
+      "survives": false
+    },
+    {
+      "id": "threshold:N225",
+      "rule": "threshold",
+      "legs": [
+        "N225"
+      ],
+      "by_period": {
+        "in_sample": {
+          "days": 3922,
+          "total_return": 3.171739394555833,
+          "ann_return": 0.09346030591993482,
+          "ann_vol": 0.1686931888694313,
+          "sharpe": 0.6134463694774316,
+          "t_stat": 2.452735550396892,
+          "max_drawdown": -0.5328416392491193,
+          "trades": 3068,
+          "hit_rate": 0.500651890482399,
+          "breakeven_bps": 10.392213058852807
+        },
+        "out_of_sample": {
+          "days": 1956,
+          "total_return": 0.17380475846191623,
+          "ann_return": 0.020268303982633462,
+          "ann_vol": 0.12320901308641558,
+          "sharpe": 0.2237042935517708,
+          "t_stat": 0.6321897088135608,
+          "max_drawdown": -0.21588518724434358,
+          "trades": 1438,
+          "hit_rate": 0.46453407510431155,
+          "breakeven_bps": 6.530749467059465
+        },
+        "hold_out": {
+          "days": 438,
+          "total_return": 0.6782335228807173,
+          "ann_return": 0.3352942122591116,
+          "ann_vol": 0.17638561041234005,
+          "sharpe": 1.727286174250075,
+          "t_stat": 2.311309256873506,
+          "max_drawdown": -0.159126424135412,
+          "trades": 338,
+          "hit_rate": 0.5088757396449705,
+          "breakeven_bps": 21.139804602994577
+        }
+      },
+      "cost_sensitivity": {
+        "0": 0.9538022126560356,
+        "2": 0.661936284229447,
+        "5": 0.2237042935517708,
+        "10": -0.5069203555482251
+      },
+      "checks": {
+        "oos_sharpe_over_0_5": false,
+        "beats_always_long_oos": true,
+        "beats_random_95pct_oos": true,
+        "significant_in_sample_bonferroni": false,
+        "holds_in_hold_out": true
+      },
+      "survives": false
+    },
+    {
+      "id": "threshold:DAX",
+      "rule": "threshold",
+      "legs": [
+        "DAX"
+      ],
+      "by_period": {
+        "in_sample": {
+          "days": 4063,
+          "total_return": 1.2942732727421289,
+          "ann_return": 0.05329954980929896,
+          "ann_vol": 0.19368828444105213,
+          "sharpe": 0.3648248827225609,
+          "t_stat": 1.4589249192730098,
+          "max_drawdown": -0.5992658958008397,
+          "trades": 2901,
+          "hit_rate": 0.5101689072733541,
+          "breakeven_bps": 8.895265432428726
+        },
+        "out_of_sample": {
+          "days": 2026,
+          "total_return": -0.4669665808978479,
+          "ann_return": -0.07570798467640572,
+          "ann_vol": 0.11132428269199415,
+          "sharpe": -0.6515259610868815,
+          "t_stat": -1.8418474652189267,
+          "max_drawdown": -0.5653236639675362,
+          "trades": 1276,
+          "hit_rate": 0.47492163009404387,
+          "breakeven_bps": 0.4572919450649513
+        },
+        "hold_out": {
+          "days": 460,
+          "total_return": -0.32344114317592976,
+          "ann_return": -0.19498471714637944,
+          "ann_vol": 0.11534572732798735,
+          "sharpe": -1.8217049172071458,
+          "t_stat": -2.445095718030184,
+          "max_drawdown": -0.37955265548965855,
+          "trades": 322,
+          "hit_rate": 0.453416149068323,
+          "breakeven_bps": -6.755993568020439
+        }
+      },
+      "cost_sensitivity": {
+        "0": 0.06561788167498638,
+        "2": -0.22135528116573486,
+        "5": -0.6515259610868815,
+        "10": -1.3663439485873439
+      },
+      "checks": {
+        "oos_sharpe_over_0_5": false,
+        "beats_always_long_oos": true,
+        "beats_random_95pct_oos": false,
+        "significant_in_sample_bonferroni": false,
+        "holds_in_hold_out": false
+      },
+      "survives": false
+    },
+    {
+      "id": "threshold:NDX",
+      "rule": "threshold",
+      "legs": [
+        "NDX"
+      ],
+      "by_period": {
+        "in_sample": {
+          "days": 4019,
+          "total_return": -0.7342301984008992,
+          "ann_return": -0.07952260361764618,
+          "ann_vol": 0.20576150055569944,
+          "sharpe": -0.29933477841083395,
+          "t_stat": -1.1970317489575772,
+          "max_drawdown": -0.8113392753485713,
+          "trades": 3180,
+          "hit_rate": 0.49245283018867925,
+          "breakeven_bps": 1.9026437573023711
+        },
+        "out_of_sample": {
+          "days": 2012,
+          "total_return": -0.64146350268002,
+          "ann_return": -0.1204522075449832,
+          "ann_vol": 0.16351964277615272,
+          "sharpe": -0.702709315904514,
+          "t_stat": -1.9865415188142617,
+          "max_drawdown": -0.6523793171823677,
+          "trades": 1533,
+          "hit_rate": 0.487279843444227,
+          "breakeven_bps": -0.9902832203100224
+        },
+        "hold_out": {
+          "days": 452,
+          "total_return": -0.44077454735359944,
+          "ann_return": -0.2757512912160546,
+          "ann_vol": 0.17094190899644035,
+          "sharpe": -1.7986085829512404,
+          "t_stat": -2.4140957753622536,
+          "max_drawdown": -0.46230650564621656,
+          "trades": 355,
+          "hit_rate": 0.4225352112676056,
+          "breakeven_bps": -10.602440214574258
+        }
+      },
+      "cost_sensitivity": {
+        "0": -0.11620299503260555,
+        "2": -0.3508655022487851,
+        "5": -0.702709315904514,
+        "10": -1.2883160958154256
+      },
+      "checks": {
+        "oos_sharpe_over_0_5": false,
+        "beats_always_long_oos": false,
+        "beats_random_95pct_oos": false,
+        "significant_in_sample_bonferroni": false,
+        "holds_in_hold_out": false
+      },
+      "survives": false
+    },
+    {
+      "id": "threshold:combined",
+      "rule": "threshold",
+      "legs": [
+        "N225",
+        "DAX",
+        "NDX"
+      ],
+      "by_period": {
+        "in_sample": {
+          "days": 4163,
+          "total_return": 1.5437120572827192,
+          "ann_return": 0.060119352354119915,
+          "ann_vol": 0.3671360291243116,
+          "sharpe": 0.3424961893685158,
+          "t_stat": 1.3696330735361741,
+          "max_drawdown": -0.7141183392750569,
+          "trades": 3882,
+          "hit_rate": 0.4817104585265327,
+          "breakeven_bps": 6.966759408925313
+        },
+        "out_of_sample": {
+          "days": 2082,
+          "total_return": -0.7756719012519135,
+          "ann_return": -0.17052197599140984,
+          "ann_vol": 0.2367869221237789,
+          "sharpe": -0.6717409527694954,
+          "t_stat": -1.8993199909050593,
+          "max_drawdown": -0.8306686004853135,
+          "trades": 1912,
+          "hit_rate": 0.448744769874477,
+          "breakeven_bps": 1.9911980406873377
+        },
+        "hold_out": {
+          "days": 470,
+          "total_return": -0.3650421373782121,
+          "ann_return": -0.2228489543109975,
+          "ann_vol": 0.25272983110747205,
+          "sharpe": -0.8708475747835074,
+          "t_stat": -1.1688532297670695,
+          "max_drawdown": -0.49433700760076005,
+          "trades": 434,
+          "hit_rate": 0.47235023041474655,
+          "breakeven_bps": 1.188135715010565
+        }
+      },
+      "cost_sensitivity": {
+        "0": 0.44924434807392294,
+        "2": 0.0014087742624933261,
+        "5": -0.6717409527694954,
+        "10": -1.7954445722490935
+      },
+      "checks": {
+        "oos_sharpe_over_0_5": false,
+        "beats_always_long_oos": true,
+        "beats_random_95pct_oos": true,
+        "significant_in_sample_bonferroni": false,
+        "holds_in_hold_out": false
+      },
+      "survives": false
+    },
+    {
+      "id": "vix:N225",
+      "rule": "vix",
+      "legs": [
+        "N225"
+      ],
+      "by_period": {
+        "in_sample": {
+          "days": 3922,
+          "total_return": -0.06424361136360579,
+          "ann_return": -0.004144946153641471,
+          "ann_vol": 0.11450920467840521,
+          "sharpe": 0.020907619319673238,
+          "t_stat": 0.0835946934093218,
+          "max_drawdown": -0.5154627145302495,
+          "trades": 3921,
+          "hit_rate": 0.4937515939811273,
+          "breakeven_bps": 5.138369718416361
+        },
+        "out_of_sample": {
+          "days": 1956,
+          "total_return": -0.30355431669245136,
+          "ann_return": -0.044287550832117106,
+          "ann_vol": 0.08487845086253118,
+          "sharpe": -0.49131564150637524,
+          "t_stat": -1.3884610232909163,
+          "max_drawdown": -0.3917719267898523,
+          "trades": 1956,
+          "hit_rate": 0.4550102249488753,
+          "breakeven_bps": 2.711810281662937
+        },
+        "hold_out": {
+          "days": 438,
+          "total_return": 0.20734661769143425,
+          "ann_return": 0.11096922578029567,
+          "ann_vol": 0.12443271916086435,
+          "sharpe": 0.907745488657651,
+          "t_stat": 1.2146687573241903,
+          "max_drawdown": -0.13934095379351918,
+          "trades": 438,
+          "hit_rate": 0.4840182648401826,
+          "breakeven_bps": 11.545272543000886
+        }
+      },
+      "cost_sensitivity": {
+        "0": 0.5829150112489535,
+        "2": 0.15294827972065014,
+        "5": -0.49131564150637524,
+        "10": -1.5624295028272517
+      },
+      "checks": {
+        "oos_sharpe_over_0_5": false,
+        "beats_always_long_oos": true,
+        "beats_random_95pct_oos": false,
+        "significant_in_sample_bonferroni": false,
+        "holds_in_hold_out": true
+      },
+      "survives": false
+    },
+    {
+      "id": "vix:DAX",
+      "rule": "vix",
+      "legs": [
+        "DAX"
+      ],
+      "by_period": {
+        "in_sample": {
+          "days": 4063,
+          "total_return": 0.588249802651666,
+          "ann_return": 0.02935191129971315,
+          "ann_vol": 0.11639646029709823,
+          "sharpe": 0.3067387553042609,
+          "t_stat": 1.2266400539364808,
+          "max_drawdown": -0.409201828607763,
+          "trades": 3837,
+          "hit_rate": 0.5089913995308835,
+          "breakeven_bps": 7.112904559850741
+        },
+        "out_of_sample": {
+          "days": 2026,
+          "total_return": -0.5244007262643933,
+          "ann_return": -0.08880005794383627,
+          "ann_vol": 0.0833958110475238,
+          "sharpe": -1.0731725803374872,
+          "t_stat": -3.0338318269614923,
+          "max_drawdown": -0.5646918587464511,
+          "trades": 1906,
+          "hit_rate": 0.4664218258132214,
+          "breakeven_bps": -0.04585315370517162
+        },
+        "hold_out": {
+          "days": 460,
+          "total_return": -0.3207597779147757,
+          "ann_return": -0.1932152743769544,
+          "ann_vol": 0.07942194594432732,
+          "sharpe": -2.6624431635628683,
+          "t_stat": -3.5735361513469868,
+          "max_drawdown": -0.35898572558010833,
+          "trades": 429,
+          "hit_rate": 0.4428904428904429,
+          "breakeven_bps": -7.582657819791107
+        }
+      },
+      "cost_sensitivity": {
+        "0": -0.009751489884817917,
+        "2": -0.4351407414916374,
+        "5": -1.0731725803374872,
+        "10": -2.1351077514256263
+      },
+      "checks": {
+        "oos_sharpe_over_0_5": false,
+        "beats_always_long_oos": false,
+        "beats_random_95pct_oos": false,
+        "significant_in_sample_bonferroni": false,
+        "holds_in_hold_out": false
+      },
+      "survives": false
+    },
+    {
+      "id": "vix:NDX",
+      "rule": "vix",
+      "legs": [
+        "NDX"
+      ],
+      "by_period": {
+        "in_sample": {
+          "days": 4019,
+          "total_return": -0.5554206391952238,
+          "ann_return": -0.04942687843915361,
+          "ann_vol": 0.12476923706788023,
+          "sharpe": -0.3436325757775963,
+          "t_stat": -1.3741774523015653,
+          "max_drawdown": -0.7504100613602459,
+          "trades": 4004,
+          "hit_rate": 0.49125874125874125,
+          "breakeven_bps": 2.571651373191895
+        },
+        "out_of_sample": {
+          "days": 2012,
+          "total_return": -0.5268610598756451,
+          "ann_return": -0.08939122125166588,
+          "ann_vol": 0.10854750655941414,
+          "sharpe": -0.8082473429693985,
+          "t_stat": -2.2848948604207715,
+          "max_drawdown": -0.5499007356528343,
+          "trades": 2005,
+          "hit_rate": 0.48079800498753117,
+          "breakeven_bps": 0.2887937605143326
+        },
+        "hold_out": {
+          "days": 452,
+          "total_return": -0.3005586894951946,
+          "ann_return": -0.17998309908521037,
+          "ann_vol": 0.10269297208704199,
+          "sharpe": -1.880243739578024,
+          "t_stat": -2.523666633970292,
+          "max_drawdown": -0.3316738378490611,
+          "trades": 451,
+          "hit_rate": 0.43458980044345896,
+          "breakeven_bps": -5.887287238070391
+        }
+      },
+      "cost_sensitivity": {
+        "0": 0.049543481077147344,
+        "2": -0.293577614415281,
+        "5": -0.8082473429693985,
+        "10": -1.6655644655007351
+      },
+      "checks": {
+        "oos_sharpe_over_0_5": false,
+        "beats_always_long_oos": false,
+        "beats_random_95pct_oos": false,
+        "significant_in_sample_bonferroni": false,
+        "holds_in_hold_out": false
+      },
+      "survives": false
+    },
+    {
+      "id": "vix:combined",
+      "rule": "vix",
+      "legs": [
+        "N225",
+        "DAX",
+        "NDX"
+      ],
+      "by_period": {
+        "in_sample": {
+          "days": 4163,
+          "total_return": -0.3392595299253848,
+          "ann_return": -0.02558007778217497,
+          "ann_vol": 0.22175801339735787,
+          "sharpe": -0.005871303491312451,
+          "t_stat": -0.02347918515910112,
+          "max_drawdown": -0.8061138574014102,
+          "trades": 4144,
+          "hit_rate": 0.4995173745173745,
+          "breakeven_bps": 4.907846309910891
+        },
+        "out_of_sample": {
+          "days": 2082,
+          "total_return": -0.8432826330561547,
+          "ann_return": -0.20691318544277204,
+          "ann_vol": 0.16658777785326087,
+          "sharpe": -1.307675830166534,
+          "t_stat": -3.6973997723657246,
+          "max_drawdown": -0.8632417978675928,
+          "trades": 2071,
+          "hit_rate": 0.4606470304200869,
+          "breakeven_bps": 0.9886707557853319
+        },
+        "hold_out": {
+          "days": 470,
+          "total_return": -0.4264032998645846,
+          "ann_return": -0.26547822340866245,
+          "ann_vol": 0.1776994927104092,
+          "sharpe": -1.6466026599301753,
+          "t_stat": -2.210073143604835,
+          "max_drawdown": -0.48300350397257996,
+          "trades": 469,
+          "hit_rate": 0.44776119402985076,
+          "breakeven_bps": -0.6541194219790324
+        }
+      },
+      "cost_sensitivity": {
+        "0": 0.32919312827279484,
+        "2": -0.32559200113138936,
+        "5": -1.307675830166534,
+        "10": -2.9403056605300737
+      },
+      "checks": {
+        "oos_sharpe_over_0_5": false,
+        "beats_always_long_oos": false,
+        "beats_random_95pct_oos": false,
+        "significant_in_sample_bonferroni": false,
+        "holds_in_hold_out": false
+      },
+      "survives": false
+    },
+    {
+      "id": "expansion:combined",
+      "rule": "expansion",
+      "legs": [
+        "N225",
+        "DAX",
+        "NDX"
+      ],
+      "by_period": {
+        "in_sample": {
+          "days": 4163,
+          "total_return": -0.5385294758432477,
+          "ann_return": -0.04720774836833008,
+          "ann_vol": 0.5653554807659935,
+          "sharpe": 0.19773793853510363,
+          "t_stat": 0.7907487117152644,
+          "max_drawdown": -0.9228653980756358,
+          "trades": 4144,
+          "hit_rate": 0.4995173745173745,
+          "breakeven_bps": 5.843970271901444
+        },
+        "out_of_sample": {
+          "days": 2082,
+          "total_return": -0.9485192158826813,
+          "ann_return": -0.31000595942031894,
+          "ann_vol": 0.3736728590416118,
+          "sharpe": -0.8056477920600327,
+          "t_stat": -2.277936086491986,
+          "max_drawdown": -0.9594426552925812,
+          "trades": 2071,
+          "hit_rate": 0.46450989859971026,
+          "breakeven_bps": 1.7892064363587532
+        },
+        "hold_out": {
+          "days": 470,
+          "total_return": -0.7336018107981424,
+          "ann_return": -0.5201367723518839,
+          "ann_vol": 0.35103271960079724,
+          "sharpe": -1.912462136642702,
+          "t_stat": -2.5669102262560357,
+          "max_drawdown": -0.734387386983356,
+          "trades": 469,
+          "hit_rate": 0.44136460554371004,
+          "breakeven_bps": -2.0253955162723485
+        }
+      },
+      "cost_sensitivity": {
+        "0": 0.46807085826904693,
+        "2": -0.04090084959313662,
+        "5": -0.8056477920600327,
+        "10": -2.0822904261200024
+      },
+      "checks": {
+        "oos_sharpe_over_0_5": false,
+        "beats_always_long_oos": true,
+        "beats_random_95pct_oos": true,
+        "significant_in_sample_bonferroni": false,
+        "holds_in_hold_out": false
+      },
+      "survives": false
+    }
+  ],
+  "baselines": {
+    "N225": {
+      "in_sample": {
+        "always_long_oc": {
+          "days": 3922,
+          "total_return": -0.9635398455652324,
+          "ann_return": -0.18710081932442835,
+          "ann_vol": 0.18596493980346995,
+          "sharpe": -1.0201267014376987,
+          "t_stat": -4.078760835534476,
+          "max_drawdown": -0.9673995559116131,
+          "trades": 3922,
+          "hit_rate": 0.4660887302396736
+        },
+        "always_long_oc_gross": {
+          "days": 3922,
+          "total_return": -0.7405601455770978,
+          "ann_return": -0.08093562368565055,
+          "ann_vol": 0.18596493980346995,
+          "sharpe": -0.36049993658587004,
+          "t_stat": -1.4413827424444776,
+          "max_drawdown": -0.7881871913047176,
+          "trades": 3922,
+          "hit_rate": 0.49184089750127485
+        },
+        "buy_hold": {
+          "days": 3922,
+          "total_return": 0.38653694844781006,
+          "ann_return": 0.02065345854114642,
+          "ann_vol": 0.24423475724189045,
+          "sharpe": 0.20614555390119574,
+          "t_stat": 0.8242293927673544,
+          "max_drawdown": -0.6136793601032873,
+          "trades": 3922,
+          "hit_rate": 0.5181030086690463
+        }
+      },
+      "out_of_sample": {
+        "always_long_oc": {
+          "days": 1956,
+          "total_return": -0.6147446784143701,
+          "ann_return": -0.11257875251586269,
+          "ann_vol": 0.13389488175531764,
+          "sharpe": -0.8245626387038226,
+          "t_stat": -2.3302190860278404,
+          "max_drawdown": -0.6344878799937219,
+          "trades": 1956,
+          "hit_rate": 0.4591002044989775
+        },
+        "always_long_oc_gross": {
+          "days": 1956,
+          "total_return": 0.024720117921572804,
+          "ann_return": 0.003062351555995546,
+          "ann_vol": 0.13389488175531764,
+          "sharpe": 0.09003204837371098,
+          "t_stat": 0.25443112218180414,
+          "max_drawdown": -0.25145662576690997,
+          "trades": 1956,
+          "hit_rate": 0.49591002044989774
+        },
+        "buy_hold": {
+          "days": 1956,
+          "total_return": 1.0871491373319522,
+          "ann_return": 0.09651014272756298,
+          "ann_vol": 0.19318994697354883,
+          "sharpe": 0.5738487062179842,
+          "t_stat": 1.621699971543145,
+          "max_drawdown": -0.3179889650850186,
+          "trades": 1955,
+          "hit_rate": 0.5304347826086957
+        }
+      },
+      "hold_out": {
+        "always_long_oc": {
+          "days": 438,
+          "total_return": -0.11517904404340862,
+          "ann_return": -0.06605893373069072,
+          "ann_vol": 0.19195436460031987,
+          "sharpe": -0.26037415282745124,
+          "t_stat": -0.34841081845743777,
+          "max_drawdown": -0.22348750184521504,
+          "trades": 438,
+          "hit_rate": 0.4794520547945205
+        },
+        "always_long_oc_gross": {
+          "days": 438,
+          "total_return": 0.10147794967339596,
+          "ann_return": 0.055462750716575915,
+          "ann_vol": 0.19195436460031987,
+          "sharpe": 0.3768006594942083,
+          "t_stat": 0.5042029892140601,
+          "max_drawdown": -0.20014249216711777,
+          "trades": 438,
+          "hit_rate": 0.4977168949771689
+        },
+        "buy_hold": {
+          "days": 438,
+          "total_return": 0.5768534070589613,
+          "ann_return": 0.289625852900546,
+          "ann_vol": 0.26764127324562986,
+          "sharpe": 1.083984748774407,
+          "t_stat": 1.4504973301484065,
+          "max_drawdown": -0.22320319257015997,
+          "trades": 438,
+          "hit_rate": 0.5342465753424658
+        }
+      }
+    },
+    "DAX": {
+      "in_sample": {
+        "always_long_oc": {
+          "days": 4063,
+          "total_return": -0.9116508603860338,
+          "ann_return": -0.1407811076047718,
+          "ann_vol": 0.22215816685789608,
+          "sharpe": -0.5718144111211347,
+          "t_stat": -2.2866704906706077,
+          "max_drawdown": -0.9257551968998209,
+          "trades": 4063,
+          "hit_rate": 0.4956928378045779
+        },
+        "always_long_oc_gross": {
+          "days": 4063,
+          "total_return": -0.325684034454532,
+          "ann_return": -0.02434006434878111,
+          "ann_vol": 0.22215816685789608,
+          "sharpe": 3.246105384329671e-06,
+          "t_stat": 1.2981088352425536e-05,
+          "max_drawdown": -0.6618180658158129,
+          "trades": 4063,
+          "hit_rate": 0.5217819345311346
+        },
+        "buy_hold": {
+          "days": 4065,
+          "total_return": 0.7845439518859858,
+          "ann_return": 0.03688007073924804,
+          "ann_vol": 0.2454396135570091,
+          "sharpe": 0.27021389711839405,
+          "t_stat": 1.0805781258612588,
+          "max_drawdown": -0.6758036013071438,
+          "trades": 4065,
+          "hit_rate": 0.5325953259532595
+        }
+      },
+      "out_of_sample": {
+        "always_long_oc": {
+          "days": 2026,
+          "total_return": -0.6493377981854347,
+          "ann_return": -0.12289284874570838,
+          "ann_vol": 0.1372680683647128,
+          "sharpe": -0.8862186358212301,
+          "t_stat": -2.505317739440688,
+          "max_drawdown": -0.675630510155481,
+          "trades": 2026,
+          "hit_rate": 0.5014807502467917
+        },
+        "always_long_oc_gross": {
+          "days": 2026,
+          "total_return": -0.034030872159945935,
+          "ann_return": -0.004323002334718495,
+          "ann_vol": 0.1372680683647128,
+          "sharpe": 0.03719450939303378,
+          "t_stat": 0.10514794027752551,
+          "max_drawdown": -0.37486502512156605,
+          "trades": 2026,
+          "hit_rate": 0.5340572556762093
+        },
+        "buy_hold": {
+          "days": 2029,
+          "total_return": 0.734085648025083,
+          "ann_return": 0.07130845149840348,
+          "ann_vol": 0.1844042890280327,
+          "sharpe": 0.4661044947693297,
+          "t_stat": 1.3176656549278436,
+          "max_drawdown": -0.38779389651624496,
+          "trades": 2029,
+          "hit_rate": 0.5303104977821587
+        }
+      },
+      "hold_out": {
+        "always_long_oc": {
+          "days": 460,
+          "total_return": -0.2329139593060695,
+          "ann_return": -0.1368665182227109,
+          "ann_vol": 0.13351857231420863,
+          "sharpe": -1.0354640752358888,
+          "t_stat": -1.3898018019377525,
+          "max_drawdown": -0.3141726280828123,
+          "trades": 460,
+          "hit_rate": 0.48478260869565215
+        },
+        "always_long_oc_gross": {
+          "days": 460,
+          "total_return": -0.03446529624215655,
+          "ann_return": -0.019280549015219806,
+          "ann_vol": 0.13351857231420863,
+          "sharpe": -0.07926022710059326,
+          "t_stat": -0.1063832237939355,
+          "max_drawdown": -0.16387988178595403,
+          "trades": 460,
+          "hit_rate": 0.5260869565217391
+        },
+        "buy_hold": {
+          "days": 460,
+          "total_return": 0.27437695468083567,
+          "ann_return": 0.14406300238633185,
+          "ann_vol": 0.17363127803643363,
+          "sharpe": 0.8619838855464023,
+          "t_stat": 1.156956369636274,
+          "max_drawdown": -0.16006331200971724,
+          "trades": 460,
+          "hit_rate": 0.5282608695652173
+        }
+      }
+    },
+    "NDX": {
+      "in_sample": {
+        "always_long_oc": {
+          "days": 4019,
+          "total_return": -0.8635298219565248,
+          "ann_return": -0.11709882658056125,
+          "ann_vol": 0.23002261390457754,
+          "sharpe": -0.42684200425801033,
+          "t_stat": -1.7069297246317938,
+          "max_drawdown": -0.9016708061440637,
+          "trades": 4019,
+          "hit_rate": 0.5023637720826076
+        },
+        "always_long_oc_gross": {
+          "days": 4019,
+          "total_return": 0.018727177993271615,
+          "ann_return": 0.0011608928698474408,
+          "ann_vol": 0.23002261390457754,
+          "sharpe": 0.11944452887328859,
+          "t_stat": 0.4776554667642709,
+          "max_drawdown": -0.7374665513582268,
+          "trades": 4019,
+          "hit_rate": 0.5277432197063946
+        },
+        "buy_hold": {
+          "days": 4025,
+          "total_return": 1.0769612753988986,
+          "ann_return": 0.04676565469753191,
+          "ann_vol": 0.2665205162989169,
+          "sharpe": 0.3042461615069342,
+          "t_stat": 1.2166722382068973,
+          "max_drawdown": -0.7052654712341888,
+          "trades": 4022,
+          "hit_rate": 0.5360517155643958
+        }
+      },
+      "out_of_sample": {
+        "always_long_oc": {
+          "days": 2012,
+          "total_return": -0.34375841721621003,
+          "ann_return": -0.05134245168205687,
+          "ann_vol": 0.17925408517513117,
+          "sharpe": -0.2042060997966351,
+          "t_stat": -0.5772854955238232,
+          "max_drawdown": -0.44089996366746154,
+          "trades": 2012,
+          "hit_rate": 0.5228628230616302
+        },
+        "always_long_oc_gross": {
+          "days": 2012,
+          "total_return": 0.7946271293822935,
+          "ann_return": 0.0759185773226303,
+          "ann_vol": 0.17925408517513117,
+          "sharpe": 0.498033067263834,
+          "t_stat": 1.407926924362078,
+          "max_drawdown": -0.24491563456023413,
+          "trades": 2012,
+          "hit_rate": 0.547713717693837
+        },
+        "buy_hold": {
+          "days": 2012,
+          "total_return": 3.3202736676781948,
+          "ann_return": 0.20093789927418482,
+          "ann_vol": 0.23120467214965384,
+          "sharpe": 0.9082047242573046,
+          "t_stat": 2.567471857119297,
+          "max_drawdown": -0.35563139690414847,
+          "trades": 2012,
+          "hit_rate": 0.56610337972167
+        }
+      },
+      "hold_out": {
+        "always_long_oc": {
+          "days": 452,
+          "total_return": -0.10066474076060028,
+          "ann_return": -0.057194086659549725,
+          "ann_vol": 0.18005077339273243,
+          "sharpe": -0.23838751789835305,
+          "t_stat": -0.31996416858703997,
+          "max_drawdown": -0.1951541104507981,
+          "trades": 452,
+          "hit_rate": 0.5110619469026548
+        },
+        "always_long_oc_gross": {
+          "days": 452,
+          "total_return": 0.12739692182735762,
+          "ann_return": 0.06882695406679917,
+          "ann_vol": 0.18005077339273243,
+          "sharpe": 0.45836376807973517,
+          "t_stat": 0.6152166995026567,
+          "max_drawdown": -0.1250601936568323,
+          "trades": 452,
+          "hit_rate": 0.5309734513274337
+        },
+        "buy_hold": {
+          "days": 452,
+          "total_return": 0.37818643232330396,
+          "ann_return": 0.1948919252250496,
+          "ann_vol": 0.22198626384325218,
+          "sharpe": 0.9123036083898828,
+          "t_stat": 1.2244955949492775,
+          "max_drawdown": -0.2293150718955156,
+          "trades": 452,
+          "hit_rate": 0.5641592920353983
+        }
+      }
+    },
+    "combined_always_long": {
+      "in_sample": {
+        "days": 4163,
+        "total_return": -0.9995603990862106,
+        "ann_return": -0.3832865763127278,
+        "ann_vol": 0.419134052458491,
+        "sharpe": -0.9434735213107478,
+        "t_stat": -3.7729253022504556,
+        "max_drawdown": -0.9996767294241997,
+        "trades": 4163,
+        "hit_rate": 0.48378573144367043
+      },
+      "out_of_sample": {
+        "days": 2082,
+        "total_return": -0.9113453850604438,
+        "ann_return": -0.26146246180374677,
+        "ann_vol": 0.28738309276083,
+        "sharpe": -0.909659018173718,
+        "t_stat": -2.572023562060946,
+        "max_drawdown": -0.9206843858890362,
+        "trades": 2082,
+        "hit_rate": 0.4908741594620557
+      },
+      "hold_out": {
+        "days": 470,
+        "total_return": -0.3895907585800171,
+        "ann_return": -0.23967343888017567,
+        "ann_vol": 0.2749938687702629,
+        "sharpe": -0.8579636294500327,
+        "t_stat": -1.1515603744485965,
+        "max_drawdown": -0.41368673781526677,
+        "trades": 470,
+        "hit_rate": 0.49148936170212765
+      }
+    }
+  },
+  "random_null_oos_sharpe": {
+    "N225": {
+      "p5": -1.4644728929637607,
+      "p50": -0.9155830485653484,
+      "p95": -0.3239879770041936
+    },
+    "DAX": {
+      "p5": -1.450788004277644,
+      "p50": -0.8860865108322145,
+      "p95": -0.33351603512464467
+    },
+    "NDX": {
+      "p5": -1.2940844816415913,
+      "p50": -0.6900924563752264,
+      "p95": -0.10459824443206535
+    },
+    "N225+DAX+NDX": {
+      "p5": -2.0094288126702677,
+      "p50": -1.4000718633715898,
+      "p95": -0.8535236334232565
+    }
+  },
+  "sequential_vs_parallel_oos": {
+    "sequential": {
+      "days": 2082,
+      "total_return": -0.9113453850604438,
+      "ann_return": -0.26146246180374677,
+      "ann_vol": 0.28738309276083,
+      "sharpe": -0.909659018173718,
+      "t_stat": -2.572023562060946,
+      "max_drawdown": -0.9206843858890362,
+      "trades": 2082,
+      "hit_rate": 0.4908741594620557
+    },
+    "parallel": {
+      "days": 2082,
+      "total_return": -0.5288005262532613,
+      "ann_return": -0.08982978231184524,
+      "ann_vol": 0.09595271716374217,
+      "sharpe": -0.9327211591239762,
+      "t_stat": -2.637230819649313,
+      "max_drawdown": -0.5465751342791652,
+      "trades": 2082,
+      "hit_rate": 0.4918347742555235
+    },
+    "parallel_x3": {
+      "days": 2082,
+      "total_return": -0.9163441600772052,
+      "ann_return": -0.2668045166177214,
+      "ann_vol": 0.28785815149122645,
+      "sharpe": -0.9327211591239766,
+      "t_stat": -2.637230819649314,
+      "max_drawdown": -0.9250683101209761,
+      "trades": 2082,
+      "hit_rate": 0.4918347742555235
+    }
+  },
+  "main_rule_bootstrap_oos": {
+    "sharpe_p2_5": -1.7300994075703107,
+    "sharpe_p50": -0.994966878350164,
+    "sharpe_p97_5": -0.23768845713247347,
+    "max_dd_p50": -0.9229735120327017,
+    "max_dd_p5": -0.9768099254664669
+  },
+  "main_rule_var_cvar_oos": {
+    "var_parametric": -0.027908032446085432,
+    "cvar_historical": -0.03638691747210697
+  },
+  "hourly_crosscheck_ndx": {
+    "first": "2023-12-06",
+    "last": "2026-10-22",
+    "days": 707,
+    "position_agreement": 0.7765205091937766,
+    "hourly_timing": {
+      "days": 707,
+      "total_return": -0.43018898296254304,
+      "ann_return": -0.17754891833472708,
+      "ann_vol": 0.16505211573288814,
+      "sharpe": -1.0998942302230206,
+      "t_stat": -1.8657659782249247,
+      "max_drawdown": -0.5355611301517418,
+      "trades": 707,
+      "hit_rate": 0.4738330975954738
+    },
+    "daily_proxy": {
+      "days": 707,
+      "total_return": -0.5652546586107468,
+      "ann_return": -0.25135285142759434,
+      "ann_vol": 0.1648066714362846,
+      "sharpe": -1.6717921529250754,
+      "t_stat": -2.8358844295042314,
+      "max_drawdown": -0.5853671507502932,
+      "trades": 707,
+      "hit_rate": 0.44271570014144274
+    }
+  },
+  "small_account": {
+    "start_sgd": 5000.0,
+    "end_sgd": -158.94133968400337,
+    "min_sgd": -158.94133968400337,
+    "max_drawdown": -1.0276396003218022,
+    "ruined_on": "2018-04-05",
+    "notional_per_contract_today_sgd": {
+      "N225": 5121.244685964505,
+      "DAX": 36354.155048864995,
+      "NDX": 73983.654825
+    },
+    "leverage_today": {
+      "N225": 1.024248937192901,
+      "DAX": 7.270831009772999,
+      "NDX": 14.796730965000002
+    },
+    "leverage_at_start": {
+      "N225": 0.3142160374326055,
+      "DAX": 3.274479575961434,
+      "NDX": 2.504138365898438
+    },
+    "start": "2017-01-01",
+    "cost_bps": 5,
+    "fx": {
+      "EURUSD": 1.1217,
+      "USDJPY": 156.912,
+      "USDSGD": 1.2774
+    },
+    "contracts": {
+      "N225": "Nikkei 225 Micro (OSE)",
+      "DAX": "Micro-DAX FDXS (Eurex)",
+      "NDX": "MNQ (CME)"
+    },
+    "no_costs": {
+      "end_sgd": -339.174157188986,
+      "min_sgd": -339.174157188986,
+      "max_drawdown": -1.016644006019417,
+      "ruined_on": "2022-11-11"
+    }
+  },
+  "lookahead_demo_ndx_sharpe": {
+    "in_sample": 1.954948576086461,
+    "out_of_sample": 1.3536127249272527,
+    "hold_out": -0.34390707929881265
+  }
+}

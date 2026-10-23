@@ -1,0 +1,63 @@
+{
+  "fetched_utc": "2026-10-23T03:17:16+00:00",
+  "daily": {
+    "N225": {
+      "rows": 6565,
+      "first": "2000-01-04",
+      "last": "2026-10-23",
+      "open_equals_prev_close": 0,
+      "open_to_close_moves_over_8pct": 10,
+      "zero_range_days": 1,
+      "defective_open_stretch_ends": null
+    },
+    "DAX": {
+      "rows": 6808,
+      "first": "2000-01-03",
+      "last": "2026-10-22",
+      "open_equals_prev_close": 5,
+      "open_to_close_moves_over_8pct": 4,
+      "zero_range_days": 0,
+      "defective_open_stretch_ends": null
+    },
+    "NDX": {
+      "rows": 6741,
+      "first": "2000-01-03",
+      "last": "2026-10-22",
+      "open_equals_prev_close": 44,
+      "open_to_close_moves_over_8pct": 11,
+      "zero_range_days": 0,
+      "defective_open_stretch_ends": "2000-10-26"
+    },
+    "VIX": {
+      "rows": 6744,
+      "first": "2000-01-03",
+      "last": "2026-10-22",
+      "open_equals_prev_close": 240,
+      "open_to_close_moves_over_8pct": 928,
+      "zero_range_days": 0,
+      "defective_open_stretch_ends": "2010-03-11"
+    }
+  },
+  "hourly": {
+    "N225": {
+      "rows": 5085,
+      "first": "2023-10-25 09:00:00+09:00",
+      "last": "2026-10-23 11:35:03+09:00"
+    },
+    "DAX": {
+      "rows": 6554,
+      "first": "2023-12-06 09:00:00+01:00",
+      "last": "2026-10-22 17:30:00+02:00"
+    },
+    "NDX": {
+      "rows": 5081,
+      "first": "2023-11-24 09:30:00-05:00",
+      "last": "2026-10-22 16:00:00-04:00"
+    }
+  },
+  "fx": {
+    "EURUSD": 1.1217,
+    "USDJPY": 156.912,
+    "USDSGD": 1.2774
+  }
+}
